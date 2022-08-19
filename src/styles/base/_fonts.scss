@@ -2,62 +2,70 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 /*=====Fonts=====*/
-/*Roboto*/
+/*Onest*/
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), local('Roboto-Regular'),
-    url('../fonts/Roboto.woff2') format('woff2'),
-    url('../fonts/Roboto.woff') format('woff'),
-    url('../fonts/Roboto.ttf') format('ttf');
+  font-family: 'Onest-Regular';
+  src: local('Onest'), local('Onest-Regular'),
+    url('../fonts/Onest-Regular.woff2') format('woff2'),
+    url('../fonts/Onest-Regular.woff') format('woff'),
+    url('../fonts/Onest-Regular.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Roboto-Medium';
-  src: local('Roboto-Medium'),
-    url('../fonts/Robotomedium.woff2') format('woff2'),
-    url('../fonts/Robotomedium.woff') format('woff'),
-    url('../fonts/Robotomedium.ttf') format('ttf');
+  font-family: 'Onest-Medium';
+  src: local('Onest-Medium'),
+    url('../fonts/Onest-Medium.woff2') format('woff2'),
+    url('../fonts/Onest-Medium.woff') format('woff'),
+    url('../fonts/Onest-Medium.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Roboto-Bold';
-  src: local('Roboto-Bold'), url('../fonts/Robotobold.woff2') format('woff2'),
-    url('../fonts/Robotobold.woff') format('woff'),
-    url('../fonts/Robotobold.ttf') format('ttf');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-/*Lato*/
-@font-face {
-  font-family: 'Lato';
-  src: local('Lato-Regular'), local('Lato'),
-    url('../fonts/latoregular.woff2') format('woff2'),
-    url('../fonts/latoregular.woff') format('woff'),
-    url('../fonts/latoregular.ttf') format('ttf');
-  font-weight: normal;
+  font-family: 'Onest-ExtraBold';
+  src: local('Onest-ExtraBold'), url('../fonts/Onest-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Onest-ExtraBold.woff') format('woff'),
+    url('../fonts/Onest-ExtraBold.ttf') format('ttf');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Lato-Medium';
-  src: local('Lato-Medium'), url('../fonts/latomedium.woff2') format('woff2'),
-    url('../fonts/latomedium.woff') format('woff'),
-    url('../fonts/latomedium.ttf') format('ttf');
-  font-weight: 500;
+  font-family: 'Onest-Bold';
+  src: local('Onest-Bold'),
+    url('../fonts/Onest-Bold.woff2') format('woff2'),
+    url('../fonts/Onest-Bold.woff') format('woff'),
+    url('../fonts/Onest-Bold.ttf') format('ttf');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Lato-Black';
-  src: local('Lato-Black'), url('../fonts/latoblack.woff2') format('woff2'),
-    url('../fonts/latoblack.woff') format('woff'),
-    url('../fonts/latoblack.ttf') format('ttf');
+  font-family: 'Onest-Thin';
+  src: local('Onest-Thin'), url('../fonts/Onest-Thin.woff2') format('woff2'),
+    url('../fonts/Onest-Thin.woff') format('woff'),
+    url('../fonts/Onest-Thin.ttf') format('ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Onest-Black';
+  src: local('Onest-Black'), url('../fonts/Onest-Black.woff2') format('woff2'),
+    url('../fonts/Onest-Black.woff') format('woff'),
+    url('../fonts/Onest-Black.ttf') format('ttf');
   font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Onest-Light';
+  src: local('Onest-Light'), url('../fonts/Onest-Light.woff2') format('woff2'),
+    url('../fonts/Onest-Light.woff') format('woff'),
+    url('../fonts/Onest-Light.ttf') format('ttf');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }

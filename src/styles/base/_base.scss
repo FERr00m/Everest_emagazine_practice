@@ -19,20 +19,27 @@
 }
 html {
   scroll-behavior: smooth;
-  font-size: calc(0.4em + 0.5vw);
+  font-size: calc(0.4em + 0.5vw);  // На ширине экрана 1920px размер шрифта 16px
   @include media('max', 'sm') {
     font-size: 12px;
   }
 }
+@media print {
+  * {
+    color: black !important;
+    background: none !important;
+  }
+}
 body {
-  font-family: $Roboto, $text-font-stack;
+  font-family: $OnestRegular, $text-font-stack;
   font-size: rem(16px);
   line-height: rem(21px);
   font-style: normal;
   font-weight: normal;
   color: var(--font-main-color);
   position: relative;
-  background-color: var(--bg-color);
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -63,29 +70,37 @@ html::-webkit-scrollbar-track {
   //border-radius: 10px;
   background-color: #f9f9fd;
 }
+table {
+  width: 100%;
+}
+td {
+  border: 1px solid #000;
+}
+@media (max-width: 30em) {
+  table, thead, tbody, tr, th, td {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin-bottom: 1em;
+  }
+}
 a:visited {
   color: inherit;
 }
-a:hover:not(.hover-btn-animation, .hvr-underline-from-center, .projects-content-list__link) {
+a:hover:not(.hover-btn-animation, .hvr-underline-from-center) {
   text-decoration: underline;
 }
 a:active {
   opacity: 0.5;
 }
-button:hover {
-  border-color: $brand-color;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem $brand-color;
-}
-button:active {
-  opacity: 0.5;
-}
 img {
+  //aspect-ratio: attr(width) / attr(height);
   max-width: 100%;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 figure {
   margin: 0;
@@ -100,18 +115,22 @@ ul {
 }
 button {
   cursor: pointer;
+  border: 1px solid var(--brand-color);
+  outline: none;
 }
 button[disabled] {
   cursor: not-allowed;
 }
+button:hover {
+  outline: none;
+}
+button:active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
 h1,
 h2,
 h3,
-h4,
-.h1,
-.h2,
-.h3,
-.h4 {
+h4 {
   margin: 0;
   padding: 0;
   line-height: 1.15;
@@ -123,6 +142,9 @@ p {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
+[v-cloak] {
+  visibility: hidden;
+}
 ._container {
   max-width: rem(1360px);
   margin: 0 auto;
@@ -132,19 +154,13 @@ p {
   }
 }
 main:not(.index-page) {
-  padding-top: rem(160px);
+  padding-top: rem(60px);
 }
 textarea {
   resize: vertical;
 }
 input {
   border: 0;
-}
-input:focus {
-  border-color: $brand-color;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgb(38 74 135 / 25%);
-  border-radius: 0.25rem;
 }
 input[type='text']::-ms-clear {
   display: none;

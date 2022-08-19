@@ -4,16 +4,20 @@ block main-content
   main.index-page
     section.index-page__promo.promo-index
       ._container(style="display: flex; flex-direction: column; align-items: center; gap: 2rem")
-        h1.title Главная страница
-        picture
-          source(type='image/webp' srcset='/img/12.webp')
-          img(src="/img/12.jpg" width="300" height="300" alt="Foto" loading="lazy")
-        svg(width="200" height="200")
-          use(xlink:href='/img/icons.svg#email-blue')
-        svg(width="200" height="200")
-          use(xlink:href='/img/icons.svg#hipster-music')
+        h1.title Главная страница {{ message }}
+        .icon-wrap
+          +icon('robot', 600, 600)
+          .eye.eye--left.center-absolute
+          .eye.eye--right.center-absolute
+        button.btn.btn--large.btn--success(@click='vueClick')
+          .span
+          span
+            | {{ counter > 2 ? 'Молодец!' : 'Кликни 3 раза!' }} {{ counter }}
+        span(style='color: Dodgerblue; height: 96px')
+          i.fa-solid.fa-thumbs-up.fa-6x
+        +pictureLazy('12', 300, 300, 'alt')
+        +icon('email-blue')
         figure
-          picture
-            source(type='image/webp' srcset='/img/3.webp')
-            img(src="/img/3.jpg" width="1200" height="600" alt="Foto" loading="lazy")
+          +picture('3', 300, 300, 'alt')
           figcaption Foto
+        +dummyImg(300, 100, '00ddff')
