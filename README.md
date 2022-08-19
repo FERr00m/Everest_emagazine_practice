@@ -1,0 +1,3 @@
+# Everest internet magazine
+
+Practice
