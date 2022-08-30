@@ -6,16 +6,20 @@
  * Set up a decent box model on the root element
  */
 :root {
-  --brand-color: #264a87;
-  --font-main-color: #ffffff;
-  --font-special-color: #045da0;
-  --bg-color: rgb(145, 92, 92);
+  --brand-color: #2A79CC;
+  --font-color: #0E192E;
+  --font-second-color: #FFFFFF;
+  --bg-color: #E5E5E5;
+  --bg-second-color: #E8EFF5;
   box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+::selection {
+  background-color: var(--brand-color);
 }
 html {
   scroll-behavior: smooth;
@@ -36,7 +40,7 @@ body {
   line-height: rem(21px);
   font-style: normal;
   font-weight: normal;
-  color: var(--font-main-color);
+  color: var(--font-color);
   position: relative;
   background: rgb(63,94,251);
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
@@ -89,11 +93,15 @@ td {
     margin-bottom: 1em;
   }
 }
+a:link {
+  text-decoration: none;
+  color: var(--font-color);
+}
 a:visited {
   color: inherit;
 }
 a:hover:not(.hover-btn-animation, .hvr-underline-from-center) {
-  text-decoration: underline;
+  color: var(--brand-color);
 }
 a:active {
   opacity: 0.5;

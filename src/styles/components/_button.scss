@@ -12,12 +12,34 @@
  * Кнопки
  */
 .btn {
+  font-family: $OnestBold;
   font-size: 1rem;
-  background-color: transparent;
-  border-radius: 0.2em;
-  border: 1px solid #000;
+  background-color: var(--brand-color);
+  border-radius: 4px;
+  border: none;
   padding: 0.5em 0.8em;
   transition: all 0.2s ease-in;
+  &:hover {
+    background: linear-gradient(0deg, rgba(14, 25, 46, 0.2), rgba(14, 25, 46, 0.2)), var(--brand-color);
+  }
+  &.is-loading {
+    position: relative;
+    color: transparent;
+  }
+   &.is-loading::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.7em;
+    margin-top: -0.7em;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+  }
 }
 .btn--small {
   font-size: 0.8rem;
