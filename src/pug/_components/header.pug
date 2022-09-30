@@ -1,12 +1,43 @@
-header.header.jq-header
-  ._container
-    transition(name='fade')
-      nav.nav(v-show="visible")
-        ul.nav__list
-          each link in links
-            li.nav__item
-              a.nav__link(href=`${link.path}`)=link.name
-    button(@click="visible = !visible") {{ visible ? 'Скрыть меню' : 'Показать меню' }}
-    | Шрифт
-    button(@click="mainFontSizeMin") -
-    button(@click="mainFontSizeMax") +
+header.header
+  .container
+    .row
+      .col.l2
+        +icon('logo', 190, 107)
+      .col.l10
+        .header__top
+          .header__top-left
+            +link('').header__geo-link
+              +icon('geo', 16, 16)
+              | Казань
+            +link('', contacts.phone.value).header__phone-link
+              +icon('phone', 14, 13)
+              =contacts.phone.text
+          .header__top-right
+            nav.header__nav.header-nav(role='navigation')
+              ul.header-nav__list
+                each link in links
+                  li.header-nav__item
+                    +link(`${link.name}`).header-nav__link
+        .header__bottom
+          button.header__catalog-btn.white.waves-effect.waves-brand.btn-large
+            +icon('burger-catalog', 24, 10)
+            | Каталог
+          form.header__search-form.search-form
+            .input-field
+              input#search.search-form__input(type='search' name='q')
+              label.search-form__label(for='search') Поиск товаров
+              button.btn.waves-effect.waves-light.blue.search-form__btn(type='submit') Найти
+          .header__user-nav.user-nav
+            ul.user-nav__list
+              li.user-nav__item
+                +link('').user-nav__link
+                  +icon('person', 20, 20)
+              li.user-nav__item
+                +link('').user-nav__link
+                  +icon('compare', 24, 24)
+              li.user-nav__item
+                +link('').user-nav__link
+                  +icon('favorite', 24, 24)
+              li.user-nav__item
+                +link('').user-nav__link
+                  +icon('cart', 22, 20)

@@ -70,6 +70,13 @@
   }
 }
 
+@mixin mediaCustom($minmax, $px) {
+  @media only screen and (#{$minmax}-width: $px) {
+    @content;
+  }
+}
+
+
 /* Стандартный transition для hover-анимаций */
 
 @mixin transition {

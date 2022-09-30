@@ -6,10 +6,11 @@ html(lang='ru_RU')
     noscript
       strong
         | We're sorry but this project doesn't work properly without JavaScript enabled. Please enable it to continue.
-    #app(v-cloak)
+    div
       include ../_components/header
 
       block main-content
 
       include ../_components/footer
+      include ../templates/modal
     include ../templates/scripts
