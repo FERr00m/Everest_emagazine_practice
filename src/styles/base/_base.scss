@@ -100,6 +100,8 @@ a:active {
 }
 img {
   //aspect-ratio: attr(width) / attr(height);
+  width: 100%;
+  height: auto;
   max-width: 100%;
 }
 figure {
@@ -138,10 +140,11 @@ p {
   }
 }
 .title {
-  color: tomato;
-  font-size: rem(45px);
-  margin: rem(15px);
-  text-align: center;
+  color: var(--font-main-color);
+  font-family: $OnestExtraBold;
+  font-size: rem(48px);
+  line-height: rem(52px);
+  margin: rem(68px) 0 rem(48px);
   text-transform: uppercase;
 }
 img.lazy {
@@ -155,6 +158,9 @@ img.lazy.loaded {
   animation: none;
 }
 // Restyle Materialize
+input:not([type]):focus:not([readonly]) + label, input[type=text]:not(.browser-default):focus:not([readonly]) + label, input[type=password]:not(.browser-default):focus:not([readonly]) + label, input[type=email]:not(.browser-default):focus:not([readonly]) + label, input[type=url]:not(.browser-default):focus:not([readonly]) + label, input[type=time]:not(.browser-default):focus:not([readonly]) + label, input[type=date]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime]:not(.browser-default):focus:not([readonly]) + label, input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label, input[type=tel]:not(.browser-default):focus:not([readonly]) + label, input[type=number]:not(.browser-default):focus:not([readonly]) + label, input[type=search]:not(.browser-default):focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: var(--brand-color);
+}
 .row {
   margin-bottom: 0;
 }

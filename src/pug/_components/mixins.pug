@@ -1,5 +1,5 @@
 mixin icon(name, w=100, h=100)
-  svg(class=`svg-icon svg-icon--${name}`, width=`${w}`, height=`${h}`)
+  svg(class=`svg-icon svg-icon--${name}`, width=`${w}`, height=`${h}` aria-hidden='true')
     use(xlink:href=`/img/icons.svg#${name}`)
 
 //--------------------

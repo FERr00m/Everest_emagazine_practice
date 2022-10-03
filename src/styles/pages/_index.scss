@@ -7,3 +7,109 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+.main-banner {
+  padding: rem(32px) 0;
+  &__item {
+    position: relative;
+  }
+  &__title {
+    position: absolute;
+    top: rem(60px);
+    left: rem(60px);
+    color: #FFFFFF;
+    margin: 0;
+    max-width: rem(588px);
+  }
+  &__link-wrap {
+    position: absolute;
+    left: rem(60px);
+    bottom: rem(60px);
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    font-family: $OnestExtraBold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+    color: #FFFFFF;
+    font-size: rem(18px);
+    line-height: 1;
+  }
+  &__chevron {
+    display: block;
+    width: rem(52px);
+    height: rem(65px);
+    background-color: var(--brand-color);
+    clip-path: polygon(80% 0, 100% 0, 20% 100%, 0 100%);
+  }
+  &__progress-bar {
+    height: 3px;
+    background: var(--brand-color);
+  }
+  & .splide__arrow {
+    width: rem(56px);
+    height: rem(56px);
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    opacity: 1;
+
+    & svg {
+      fill: var(--brand-color);
+    }
+  }
+  & .splide__arrow {
+    bottom: rem(40px);
+    top: unset;
+  }
+  & .splide__arrow--next {
+    right: rem(72px);
+  }
+  & .splide__arrow--prev {
+    left: unset;
+    right: rem(140px);
+    & svg {
+      transform: rotateX(0deg);
+    }
+  }
+  & .splide__pagination {
+    @include media('min', 'lg') {
+      display: none;
+    }
+  }
+}
+.catalog {
+  &__card {
+    padding: rem(36px) rem(32px) rem(32px);
+    border-radius: 4px;
+    background-color: var(--bg-color2);
+  }
+  &__img-wrap {
+    position: relative;
+    width: rem(100px);
+    height: rem(100px);
+    & img {
+      position: absolute;
+      width: initial;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__polygon {
+    background-color: var(--brand-color);
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+  }
+}
+.pentagon {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.rhombus {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}

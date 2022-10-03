@@ -13,9 +13,11 @@ import '@/styles/style';
 // JS Modules
 import MyFunctions from '@/js/modules/MyFunctions';
 import jq from '@/js/modules/jq';
+import sliders from '@/js/modules/sliders';
 
 requireAll(require.context('@/svg/', true, /\.svg$/));
 
 window.myFunctions = new MyFunctions();
 
 jq();
+sliders();

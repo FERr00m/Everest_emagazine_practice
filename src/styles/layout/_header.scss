@@ -18,7 +18,7 @@
   }
   &__top-right {
     margin-left: auto;
-    margin-right: -11px;
+    margin-right: rem(-11px);
   }
   &__top-left {
     display: flex;
@@ -28,23 +28,25 @@
       align-items: center;
     }
     a:first-child {
-      margin-right: 25px;
+      margin-right: rem(25px);
     }
     & .svg-icon {
-      margin-right: 10px;
+      margin-right: rem(10px);
     }
   }
   &__catalog-btn {
     font-family: $OnestExtraBold;
     color: var(--font-main-color);
     font-size: rem(18px);
-    padding: 0 22px;
+    padding: 0 rem(22px);
+    margin-right: rem(24px);
     & .svg-icon {
-      margin-right: 16px;
+      margin-right: rem(16px);
     }
   }
   &__search-form {
     flex-grow: 1;
+    margin-right: rem(32px);
   }
 }
 .header-nav {
@@ -53,39 +55,56 @@
   background-color: transparent;
   &__link {
     color: var(--font-main-color);
-    padding: 0 11px;
+    padding: 0 rem(11px);
   }
 }
-.search-form {
-
-  & .input-field {
+.user-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(24px);
+  }
+  &__item {
     position: relative;
-    margin: 0;
-    max-width: rem(575px);
   }
-  &__btn {
+  &__counter {
+    z-index: 6;
     position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: rem(10px);
+    font-family: $OnestMedium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: rem(-8px);
+    top: rem(-6px);
+    width: rem(17px);
+    height: rem(17px);
+    background-color: #EDD258;
+    border-radius: 50%;
+    border: 2px solid var(--bg-color2);
   }
-  &__input {
-    margin-bottom: 0 !important;
-    border-bottom: none !important;
-    margin: 0 !important;
-    background-color: #D8E1EA !important;
-    border-radius: 4px !important;
-    height: 54px !important;
-    padding: rem(16px) rem(90px) rem(16px) rem(16px) !important;
-    max-width: rem(575px);
-    box-sizing: border-box !important;
-  }
-  & label.search-form__label {
-    top: 50%;
-    transform: translateY(-50%);
-    left: 16px;
+  &__link:hover svg {
+    filter: brightness(0.8);
   }
 }
-.input-field > label:not(.label-icon).active {
-  transform: translateY(-25px) scale(0.8);
+.svg-icon {
+  height: auto;
+}
+.svg-icon--logo {
+  width: rem(190px);
+}
+.svg-icon--geo {
+  width: rem(16px);
+}
+.svg-icon--phone {
+  width: rem(14px);
+}
+.svg-icon--burger-catalog {
+  width: rem(24px);
+}
+.svg-icon--person,
+.svg-icon--compare,
+.svg-icon--favorite,
+.svg-icon--cart {
+  width: rem(20px);
 }

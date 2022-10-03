@@ -1,44 +1,104 @@
 extends ./templates/layout
 
 block main-content
-  main#index-banner.section.no-pad-bot
-    .container
-      h1.header.center.orange-text Starter Template
-      .row.center
-        h5.header.col.s12.light A modern responsive front-end framework based on Material Design
-      .row.center
-        button#download-button.btn-large.waves-effect.waves-light.orange() Get Started
-    .parallax-container(style='height: 350px')
-        .parallax
-          img(src='/img/3.jpg')
-    .container
-      section.section
-        // Icon Section
+  main
+    h1.visually-hidden Строительный магазин "Эверест"
+    section.main-banner(aria-label="Главный слайдер")
+      .container
         .row
-          .col.s12.m4
-            .icon-block
-              h2.center.light-blue-text
-                i.material-icons flash_on
-              h5.center Speeds up development
-              p.light
-                | We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-          .col.s12.m4
-            .icon-block
-              h2.center.light-blue-text
-                i.material-icons group
-              h5.center User Experience Focused
-              p.light
-                | By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
-          .col.s12.m4
-            .icon-block
-              h2.center.light-blue-text
-                i.material-icons settings
-              h5.center Easy to work with
-              p.light
-                | We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+          .col.s12.main-slider.splide.jq-main-banner
+            .splide__arrows
+              button.splide__arrow.splide__arrow--prev
+                svg(width='10' height='17' viewbox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M9.54789 16.5532C10.1507 15.9576 10.1507 14.9918 9.54789 14.3961L2.63511 7.56503C2.0323 6.96935 1.05494 6.96935 0.452129 7.56503C-0.150685 8.16072 -0.150685 9.12651 0.452129 9.7222L7.36491 16.5532C7.96772 17.1489 8.94508 17.1489 9.54789 16.5532Z')
+                  path(d='M9.54787 0.446764C8.94506 -0.148921 7.9677 -0.148921 7.36489 0.446764L0.452111 7.2778C-0.150703 7.87349 -0.150703 8.83928 0.452111 9.43497C1.05493 10.0307 2.03228 10.0307 2.63509 9.43497L9.54787 2.60393C10.1507 2.00825 10.1507 1.04245 9.54787 0.446764Z' )
+              button.splide__arrow.splide__arrow--next
+                svg(width='10' height='17' viewbox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M0.45211 16.5532C-0.150703 15.9576 -0.150704 14.9918 0.45211 14.3961L7.36489 7.56503C7.9677 6.96935 8.94506 6.96935 9.54787 7.56503C10.1507 8.16072 10.1507 9.12651 9.54787 9.7222L2.63509 16.5532C2.03228 17.1489 1.05492 17.1489 0.45211 16.5532Z')
+                  path(d='M0.452129 0.446764C1.05494 -0.148921 2.0323 -0.148921 2.63511 0.446764L9.54789 7.2778C10.1507 7.87349 10.1507 8.83928 9.54789 9.43497C8.94508 10.0307 7.96772 10.0307 7.36491 9.43497L0.452129 2.60393C-0.150685 2.00825 -0.150685 1.04245 0.452129 0.446764Z')
+            .splide__track
+              ul.splide__list
+                li.splide__slide.main-banner__item
+                  p.main-banner__title.title
+                    | Закажи онлайн — забери в пункте выдачи
+                  .main-banner__link-wrap
+                    span.main-banner__chevron
+                    +link('узнать подробнее').main-banner__link
+                      +icon('banner-arrow', 17, 19)
+                  +picture('banner_01', 1320, 550)
+                li.splide__slide
+                  p.main-banner__title.title
+                    | Закажи онлайн!
+                  .main-banner__link-wrap
+                    span.main-banner__chevron
+                    +link('узнать подробнее').main-banner__link
+                      +icon('banner-arrow', 17, 19)
+                  +picture('banner_02', 1320, 550)
+            .splide__progress
+              .splide__progress__bar.main-banner__progress-bar
+    section.catalog
+      .container
+        .row
+          .col.s12
+            h2.title каталог
+        .row
+          .col.s12.m6.l4
+            .catalog__card
+              .catalog__img-wrap
+                .catalog__polygon.pentagon
+                +pictureLazy('catalog_01', 77, 64, 'png')
+          .col.s12.m6.l4
+            .catalog__card
+              .catalog__img-wrap
+                .catalog__polygon.rhombus
+                +pictureLazy('catalog_02', 78, 96, 'png')
+          .col.s12.m6.l4
+            .catalog__card
+              .catalog__img-wrap
+                .catalog__polygon.hexagon
+                +pictureLazy('catalog_03', 59, 78, 'png')
 
-      .section.white
-        .row.container
-          h2.header Parallax
-          p.grey-text.text-darken-3.lighten-3
-            | Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.
+
+
+
+
+
+
+
+
+
+
+    //- .parallax-container(style='height: 350px')
+    //-     .parallax
+    //-       img(src='/img/3.jpg')
+    //- .container
+    //-   section.section
+    //-     // Icon Section
+    //-     .row
+    //-       .col.s12.m4
+    //-         .icon-block
+    //-           h2.center.light-blue-text
+    //-             i.material-icons flash_on
+    //-           h5.center Speeds up development
+    //-           p.light
+    //-             | We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+    //-       .col.s12.m4
+    //-         .icon-block
+    //-           h2.center.light-blue-text
+    //-             i.material-icons group
+    //-           h5.center User Experience Focused
+    //-           p.light
+    //-             | By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+    //-       .col.s12.m4
+    //-         .icon-block
+    //-           h2.center.light-blue-text
+    //-             i.material-icons settings
+    //-           h5.center Easy to work with
+    //-           p.light
+    //-             | We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+
+    //-   .section.white
+    //-     .row.container
+    //-       h2.header Parallax
+    //-       p.grey-text.text-darken-3.lighten-3
+    //-         | Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.

@@ -26,18 +26,20 @@ header.header
             .input-field
               input#search.search-form__input(type='search' name='q')
               label.search-form__label(for='search') Поиск товаров
-              button.btn.waves-effect.waves-light.blue.search-form__btn(type='submit') Найти
+              button.btn.waves-effect.waves-light.search-form__btn(type='submit') Найти
           .header__user-nav.user-nav
             ul.user-nav__list
               li.user-nav__item
                 +link('').user-nav__link
-                  +icon('person', 20, 20)
+                  +icon('person', 20, 22)
               li.user-nav__item
                 +link('').user-nav__link
-                  +icon('compare', 24, 24)
+                  +icon('compare', 20, 22)
               li.user-nav__item
                 +link('').user-nav__link
-                  +icon('favorite', 24, 24)
+                  span.user-nav__counter.favorite 2
+                  +icon('favorite', 20, 22)
               li.user-nav__item
                 +link('').user-nav__link
-                  +icon('cart', 22, 20)
+                  span.user-nav__counter.cart 5
+                  +icon('cart', 20, 22)
